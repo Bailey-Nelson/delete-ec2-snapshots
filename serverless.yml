@@ -32,5 +32,5 @@ functions:
     description: Delete ec2 snapshots that are older than 60 days old
     timeout: 90
     reservedConcurrency: 1
-    # events:
-    #   - schedule: rate(2 days)
+    events:
+      - schedule: rate(2 days)

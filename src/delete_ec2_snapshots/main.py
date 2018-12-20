@@ -13,8 +13,6 @@ def main(a, b):
         delete_time = datetime.now(timezone.utc) - timedelta(days=60)
         if delete_time > start_time and description == '':
             count += 1
-            print('fmt_start_time = {} And delete_time = {}'.format(
-                start_time, delete_time))
-            # snapshot.delete()
+            snapshot.delete()
             print('Snapshot with Id = {} was deleted'.format(snapshot.snapshot_id))
     print('{} snapshots deleted'.format(count))
