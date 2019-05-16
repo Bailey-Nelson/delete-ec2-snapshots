@@ -9,7 +9,6 @@ provider:
   versionFunctions: true
 
   environment:
-    # general
     STAGE: ${self:provider.stage}
 
   iamRoleStatements:
@@ -33,4 +32,4 @@ functions:
     timeout: 90
     reservedConcurrency: 1
     events:
-      - schedule: rate(2 days)
+      - schedule: rate(2 hours)

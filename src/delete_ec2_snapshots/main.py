@@ -10,7 +10,7 @@ def main(a, b):
     for snapshot in snapshots:
         start_time = snapshot.start_time
         description = snapshot.description
-        delete_time = datetime.now(timezone.utc) - timedelta(days=60)
+        delete_time = datetime.now(timezone.utc) - timedelta(days=90)
         if delete_time > start_time and description == '':
             count += 1
             snapshot.delete()
